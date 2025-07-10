@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Stopwatch</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="stopwatch-container">
+    <h1>Enhanced Stopwatch</h1>
+    <div id="time">00:00:00</div>
+    <div class="buttons">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <button onclick="resetTimer()">Reset</button>
+      <button onclick="saveTime()">Save Time</button>
+    </div>
+
+    <div class="saved-times">
+      <h2>Saved Times</h2>
+      <ul id="savedTimes"></ul>
+    </div>
+
+    <h2>Time Data Visualization</h2>
+    <canvas id="timeChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="{{ url_for('static', filename='chart.js') }}"></script>
+</body>
+</html>
